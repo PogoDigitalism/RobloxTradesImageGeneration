@@ -1,6 +1,6 @@
 ## code is not optimized
 
-async def generate_offer_image(limited_id_list,total_value,image_template,image_sizeX,image_sizeY):
+async def generate_offer_image(limited_id_list: list, total_value: int, image_template, image_sizeX: int, image_sizeY: int) -> discord.File:
     background = Image.open(image_template)
     size = (image_sizeX, image_sizeY)
     background = background.resize(size, Image.Resampling.LANCZOS)
